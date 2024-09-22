@@ -82,19 +82,19 @@ if (isset($_GET['ma_tloai'])) {
         <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
         <div class="row">
             <div class="col-sm">
-                <h3 class="text-center text-uppercase fw-bold text-danger">Sửa thông tin thể loại</h3>
+                <h3 class="text-center text-uppercase fw-bold ">Sửa thông tin thể loại</h3>
                 <form action="edit_category.php?ma_tloai=<?php echo $ma_tloai; ?>" method="post">
-
+                
                     <div class="input-group mt-3 mb-3">
-                            <span class="input-group-text" id="lblCatId">Mã thể loại</span>
+                            <span class="input-group-text col-2 text-center" id="lblCatId">Mã thể loại</span>
                             <!-- <input type="text" class="form-control" name="txtCatId" readonly value="1"> -->
-                            <input type="number" class="form-control" name="ma_tloai" value="<?php echo $category['ma_tloai']; ?>" readonly>
+                            <input type="number" class="form-control col-10" name="ma_tloai" value="<?php echo $category['ma_tloai']; ?>" readonly>
 
                     </div>
 
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text" id="lblCatName">Tên thể loại</span>
-                        <input type="text" class="form-control" name="ten_tloai" value="<?php echo $category['ten_tloai']; ?>" required>
+                        <span class="input-group-text col-2 text-center" id="lblCatName">Tên thể loại</span>
+                        <input type="text" class="form-control col-10" name="ten_tloai" value="<?php echo $category['ten_tloai']; ?>" required>
 
                     </div>
 

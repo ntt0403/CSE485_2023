@@ -28,7 +28,6 @@
         } else {
             echo '<div class="alert alert-danger" role="alert"> Tài khoản hoặc mật khẩu sai! </div>';
         }
-        
     }
 ?>
 <body>

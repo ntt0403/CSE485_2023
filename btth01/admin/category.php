@@ -58,9 +58,9 @@
         <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
         <div class="row">
             <div class="col-sm">
-                <a href="add_category.php" class="btn btn-success">Thêm mới</a>
-                <table class="table">
-                    <thead>
+                <a href="add_category.php" class="btn btn-success my-2">Thêm mới</a>
+                <table class="table table-bordered">
+                    <thead class = "table-primary">
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Tên thể loại</th>
@@ -78,12 +78,12 @@
                                     ?>
                                 </td>
                                 <td>
-                                    <a href="edit_category.php?ma_tloai=<?php echo htmlspecialchars($theloai['ma_tloai']); ?>"><i class="fa-solid fa-pen-to-square"></i></a>
+                                    <a href="edit_category.php?ma_tloai=<?php echo htmlspecialchars($theloai['ma_tloai']); ?>"><i class="fa-solid fa-pen-to-square text-warning"></i></a>
                                 </td>
                                 <td>
                                     <a href="delete_category.php?ma_tloai=<?php echo htmlspecialchars($theloai['ma_tloai']); ?>" 
                                         onclick="return confirm('Bạn có chắc chắn muốn xóa thể loại này không?');">
-                                        <i class="fa-solid fa-trash"></i>
+                                        <i class="fa-solid fa-trash text-danger"></i>
                                     </a>
                                 </td>
                             </tr>

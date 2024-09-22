@@ -1,7 +1,7 @@
 <?php
     if (isset($_GET['query'])) 
     {
-        $query = trim(preg_replace('/\s+/', ' ', $_GET['query'])); // Loại bỏ các khoảng trắng thừa
+        $query = trim(preg_replace('/\s+/', ' ', $_GET['query'])); 
         echo "Giá trị query: " . $query . "<br>";
     
         if (strcasecmp($query, 'Cây, lá và gió') === 0) {
@@ -28,7 +28,5 @@
             echo "Không tìm thấy nội dung.";
         }
     } 
-   
-    
 ?>
 

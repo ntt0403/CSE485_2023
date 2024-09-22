@@ -44,7 +44,7 @@ if (isset($_POST['Luu_lai'])) { // Thay 'Thêm' thành 'Lưu lại'
     if (empty($ma_bviet) || empty($tieude) || empty($ten_bhat) || empty($ma_tloai) || empty($tomtat) || empty($ma_tgia) || empty($ngayviet)) {
         echo "Vui lòng nhập đầy đủ thông tin!";
     } else {
-        $sql = "UPDATE baiviet SET tieude = :tieude, ten_bhat = :ten_bhat, ma_tloai = :ma_tloai, tomtat = :tomtat, ma_tgia = :ma_tgia, ngayviet = :ngayviet WHERE ma_bviet = :ma_bviet"; 
+        $sql = "UPDATE baiviet SET tieude = :tieude, ten_bhat = :ten_bhat, ma_tloai = :ma_tloai, tomtat = :tomtat, ma_tgia = :ma_tgia, ngayviet = :ngayviet WHERE ma_bviet = :ma_bviet"; // Đã sửa câu lệnh SQL
         $stmt = $pdo->prepare($sql);
 
         $stmt->execute([
@@ -105,49 +105,50 @@ if (isset($_POST['Luu_lai'])) { // Thay 'Thêm' thành 'Lưu lại'
                 <h3 class="text-center text-uppercase fw-bold">Chỉnh sửa bài viết</h3>
                 <form action="edit_article.php?ma_bviet=<?php echo $ma_bviet; ?>" method="post">
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Mã bài viết</span>
-                        <input type="text" class="form-control" name="txtMaBViet" value="<?php echo htmlspecialchars($baiviet['ma_bviet']); ?>" required>
+                        <span class="input-group-text col-2 text-center">Mã bài viết</span>
+                        <input type="text" class="form-control col-10" name="txtMaBViet" value="<?php echo htmlspecialchars($baiviet['ma_bviet']); ?>" required>
                     </div>
 
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Tiêu đề</span>
-                        <input type="text" class="form-control" name="txtTieuDe" value="<?php echo htmlspecialchars($baiviet['tieude']); ?>" required>
+                        <span class="input-group-text col-2 text-center">Tiêu đề</span>
+                        <input type="text" class="form-control col-10" name="txtTieuDe" value="<?php echo htmlspecialchars($baiviet['tieude']); ?>" required>
                     </div>
 
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Tên bài hát</span>
-                        <input type="text" class="form-control" name="txtTenBhat" value="<?php echo htmlspecialchars($baiviet['ten_bhat']); ?>" required>
+                        <span class="input-group-text col-2 text-center">Tên bài hát</span>
+                        <input type="text" class="form-control col-10" name="txtTenBhat" value="<?php echo htmlspecialchars($baiviet['ten_bhat']); ?>" required>
                     </div>
 
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Mã thể loại</span>
-                        <input type="text" class="form-control" name="txtMaTLoai" value="<?php echo htmlspecialchars($baiviet['ma_tloai']); ?>" required>
+                        <span class="input-group-text col-2 text-center">Mã thể loại</span>
+                        <input type="text" class="form-control col-10" name="txtMaTLoai" value="<?php echo htmlspecialchars($baiviet['ma_tloai']); ?>" required>
                     </div>
 
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Tóm tắt</span>
-                        <input type="text" class="form-control" name="txtTomTat" value="<?php echo htmlspecialchars($baiviet['tomtat']); ?>" required>
+                        <span class="input-group-text col-2 text-center">Tóm tắt</span>
+                        <input type="text" class="form-control col-10" name="txtTomTat" value="<?php echo htmlspecialchars($baiviet['tomtat']); ?>" required>
                     </div>
 
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Mã tác giả</span>
-                        <input type="text" class="form-control" name="txtMaTGia" value="<?php echo htmlspecialchars($baiviet['ma_tgia']); ?>" required>
+                        <span class="input-group-text col-2 text-center">Mã tác giả</span>
+                        <input type="text" class="form-control col-10" name="txtMaTGia" value="<?php echo htmlspecialchars($baiviet['ma_tgia']); ?>" required>
                     </div>
 
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Ngày viết</span>
-                        <input type="date" class="form-control" name="ngayviet" value="<?php echo htmlspecialchars($baiviet['ngayviet']); ?>" required>
+                        <span class="input-group-text col-2 text-center">Ngày viết</span>
+                        <input type="date" class="form-control col-10" name="ngayviet" value="<?php echo htmlspecialchars($baiviet['ngayviet']); ?>" required>
                     </div>
 
-                    <div class="form-group float-end ">
+                    <div class="form-group float-end">
                         <button type="submit" name="Luu_lai" class="btn btn-primary">Lưu lại</button>
-                        <a href="article.php" class="btn btn-warning ">Quay lại</a>
+                        <a href="article.php" class="btn btn-warning">Quay lại</a>
                     </div>
                 </form>
+
             </div>
         </div>
     </main>
-    <footer class="bg-white d-flex justify-content-center align-items-center border-top border-secondary border-2" style="height:80px">
+    <footer class="bg-white d-flex justify-content-center align-items-center border-top border-secondary border-2 my-5" style="height:80px">
         <h4 class="text-center text-uppercase fw-bold">TLU's music garden</h4>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

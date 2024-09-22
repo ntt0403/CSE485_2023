@@ -57,19 +57,19 @@
         <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
         <div class="row">
             <div class="col-sm">
-                <a href="add_article.php" class="btn btn-success">Thêm mới</a>
-                <table class="table">
-                    <thead>
+                <a href="add_article.php" class="btn btn-success my-2">Thêm mới</a>
+                <table class="table table-bordered">
+                    <thead class = "table-primary">
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Tiêu đề</th>
-                            <th scope="col">Tên bài hát</th>
-                            <th scope="col">Mã thể loại</th>
-                            <th scope="col">Tóm tắt</th>
-                            <th scope="col">Mã tác giả</th>
-                            <th scope="col">Ngày viết</th>
-                            <th>Sửa</th>
-                            <th>Xóa</th>
+                            <th class="text-center align-middle" scope="col">#</th>
+                            <th class="text-center align-middle" scope="col">Tiêu đề</th>
+                            <th class="text-center align-middle" scope="col">Tên bài hát</th>
+                            <th class="text-center align-middle" scope="col">Mã thể loại</th>
+                            <th class="text-center align-middle" scope="col">Tóm tắt</th>
+                            <th class="text-center align-middle" scope="col">Mã tác giả</th>
+                            <th class="text-center align-middle" scope="col">Ngày viết</th>
+                            <th class="text-center align-middle">Sửa</th>
+                            <th class="text-center align-middle">Xóa</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -105,14 +105,12 @@
                                     <?php 
                                         echo htmlspecialchars($baiviet['ngayviet']); 
                                     ?>
-                                </td>
-                                
+                               
                                 <td>
-                                <td>
-                                    <a href="edit_article.php?ma_bviet=<?php echo htmlspecialchars($baiviet['ma_bviet']); ?>"><i class="fa-solid fa-pen-to-square"></i></a>
+                                    <a href="edit_article.php?ma_bviet=<?php echo htmlspecialchars($baiviet['ma_bviet']); ?>"><i class="fa-solid fa-pen-to-square text-warning"></i></a>
                                 </td>                                
                                 <td>
-                                    <a href="delete_article.php?ma_bviet=<?php echo $baiviet['ma_bviet']; ?>"><i class="fa-solid fa-trash"></i></a>
+                                    <a href="delete_article.php?ma_bviet=<?php echo $baiviet['ma_bviet']; ?>"><i class="fa-solid fa-trash text-danger"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

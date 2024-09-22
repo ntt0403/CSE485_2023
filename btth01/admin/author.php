@@ -57,9 +57,9 @@
 <main class="container mt-5 mb-5">
     <div class="row">
         <div class="col-sm">
-            <a href="add_author.php" class="btn btn-success">Thêm mới</a>
-            <table class="table">
-                <thead>
+            <a href="add_author.php" class="btn btn-success my-2">Thêm mới</a>
+            <table class = "table table-bordered">
+                <thead class = "table-primary">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Tên tác giả</th>
@@ -73,10 +73,10 @@
                             <th scope="row"><?php echo $index + 1; ?></th>
                             <td><?php echo htmlspecialchars($tacgia['ten_tgia']); ?></td>
                             <td>
-                                <a href="edit_author.php?ma_tgia=<?php echo htmlspecialchars($tacgia['ma_tgia']); ?>"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="edit_author.php?ma_tgia=<?php echo htmlspecialchars($tacgia['ma_tgia']); ?>"><i class="fa-solid fa-pen-to-square text-warning"></i></a>
                             </td>
                             <td>
-                                <a href="delete_author.php?ma_tgia=<?php echo htmlspecialchars($tacgia['ma_tgia']); ?>"><i class="fa-solid fa-trash"></i></a>
+                                <a href="delete_author.php?ma_tgia=<?php echo htmlspecialchars($tacgia['ma_tgia']); ?>"><i class="fa-solid fa-trash text-danger"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
