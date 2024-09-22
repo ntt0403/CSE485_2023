@@ -13,7 +13,7 @@
         $song = $_GET['song'];
     } else {
         $song = 'default'; 
-
+    }
     switch ($song) {
         case 'phoipha':
             $songTitle = "Phôi pha";

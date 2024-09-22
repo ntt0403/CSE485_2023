@@ -13,7 +13,7 @@
         $song = $_GET['song'];
     } else {
         $song = 'default'; 
-
+    }
     switch ($song) {
         case 'longme':
             $songTitle = "Lòng mẹ";
@@ -33,7 +33,8 @@
             $songImage = "images/default.jpg"; 
             break;
     }
-}
+
+
 ?>
 <body>
     <header>
