@@ -93,28 +93,28 @@ if (isset($_POST['Thêm'])) {
                 <h3 class="text-center text-uppercase fw-bold">Thêm mới bài viết</h3>
                 <form action="add_article.php" method="post">
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Mã bài viết</span>
-                        <input type="text" class="form-control" name="txtMaBViet" required>
+                        <span class="input-group-text col-2 text-center">Mã bài viết</span>
+                        <input type="text" class="form-control col-10" name="txtMaBViet" required>
                     </div>
 
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Tiêu đề</span>
-                        <input type="text" class="form-control" name="txtTieuDe" required>
+                        <span class="input-group-text col-2 text-center">Tiêu đề</span>
+                        <input type="text" class="form-control col-10" name="txtTieuDe" required>
                     </div>
 
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Tên bài hát</span>
-                        <input type="text" class="form-control" name="txtTenBhat" required>
+                        <span class="input-group-text col-2 text-center">Tên bài hát</span>
+                        <input type="text" class="form-control col-10" name="txtTenBhat" required>
                     </div>
 
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Mã thể loại</span>
-                        <input type="text" class="form-control" name="txtMaTLoai" required>
+                        <span class="input-group-text col-2 text-center">Mã thể loại</span>
+                        <input type="text" class="form-control col-10" name="txtMaTLoai" required>
                     </div>
 
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Tóm tắt</span>
-                        <input type="text" class="form-control" name="txtTomTat" required>
+                        <span class="input-group-text col-2 text-center">Tóm tắt</span>
+                        <input type="text" class="form-control col-10" name="txtTomTat" required>
                     </div>
 
                     <!--<div class="input-group mt-3 mb-3">
@@ -123,13 +123,13 @@ if (isset($_POST['Thêm'])) {
                     </div>-->
 
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Mã tác giả</span>
-                        <input type="text" class="form-control" name="txtMaTGia" required>
+                        <span class="input-group-text col-2 text-center">Mã tác giả</span>
+                        <input type="text" class="form-control col-10" name="txtMaTGia" required>
                     </div>
 
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text">Ngày viết</span>
-                        <input type="date" class="form-control" name="ngayviet" required>
+                        <span class="input-group-text col-2 text-center">Ngày viết</span>
+                        <input type="date" class="form-control col-10" name="ngayviet" required>
                     </div>
 
                     <!--<div class="mb-3">

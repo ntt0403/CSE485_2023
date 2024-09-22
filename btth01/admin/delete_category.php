@@ -36,7 +36,7 @@ if (isset($_GET['ma_tloai'])) {
             $sql = "DELETE from theloai WHERE ma_tloai = :ma_tloai";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
-                'ma_tloai' => $ma_tloai
+                'ma_tloai' => $ma_tloai 
             ]);
             header("Location: category.php");
             exit;
@@ -45,7 +45,6 @@ if (isset($_GET['ma_tloai'])) {
 }
 ?>
 <body>
-    
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary shadow p-3 bg-white rounded">
             <div class="container-fluid">
@@ -76,7 +75,6 @@ if (isset($_GET['ma_tloai'])) {
                 </div>
             </div>
         </nav>
-
     </header>
     <div class="container mt-5">
         <h2 class="text-center text-danger">Xóa thông tin thể loại</h2>

@@ -81,8 +81,7 @@
                                     <a href="edit_category.php?ma_tloai=<?php echo htmlspecialchars($theloai['ma_tloai']); ?>"><i class="fa-solid fa-pen-to-square text-warning"></i></a>
                                 </td>
                                 <td>
-                                    <a href="delete_category.php?ma_tloai=<?php echo htmlspecialchars($theloai['ma_tloai']); ?>" 
-                                        onclick="return confirm('Bạn có chắc chắn muốn xóa thể loại này không?');">
+                                    <a href="delete_category.php?ma_tloai=<?php echo htmlspecialchars($theloai['ma_tloai']); ?>">
                                         <i class="fa-solid fa-trash text-danger"></i>
                                     </a>
                                 </td>
