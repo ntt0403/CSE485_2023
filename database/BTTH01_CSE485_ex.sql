@@ -123,12 +123,20 @@ BEGIN
     END
 END;
 --Bổ sung thêm bảng Users để lưu thông tin Tài khoản đăng nhập và sử dụng cho chức năng Đăng nhập/Quản trị trang web. 
-create table Users (
-    user_id INT PRIMARY KEY IDENTITY(1,1), 
-    username NVARCHAR(50) NOT NULL UNIQUE, 
-    password NVARCHAR(255) NOT NULL, 
-    email NVARCHAR(100) NOT NULL UNIQUE, 
-    role NVARCHAR(20) DEFAULT 'user', 
-    created_at DATETIME DEFAULT GETDATE(),
-    last_login DATETIME 
+create table users(
+    id int unsigned auto_increment primary key,
+    username varchar(60) not null,
+    password varchar(60) not null,
+    role varchar(60) not null
 );
+insert into users (username, password, role) VALUES ('admin1', '1234@', 'admin');
+insert into users (username, password, role) VALUES ('admin2', '1234@', 'admin');
+insert into users (username, password, role) VALUES ('thao1', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao2', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao3', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao4', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao5', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao7', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao8', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao9', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao10', '1234@', 'user');

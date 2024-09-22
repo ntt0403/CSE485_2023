@@ -130,7 +130,6 @@ values (
 'Em không phải là người giỏi giấu cảm xúc, nhưng em lại là người giỏi đoán biết cảm xúc của người khác vậy nên đừng cố nói nhớ em, rằng mọi thứ chỉ là do hoàn cảnh. Và cũng đừng dối em rằng anh đã từng yêu em. Em nhắm mắt cũng cảm nhận được mà, thật đấy',
 2, '2013/8/21'
 );
-select * from baiviet
 
 
 insert into baiviet (ma_bviet, tieude, ten_bhat, ma_tloai, tomtat, ma_tgia, ngayviet)
@@ -159,3 +158,21 @@ values (
 'Ánh nắng cuối ngày rồi cũng sẽ tắt, dòng sông con đò rồi cũng sẽ rẽ sang một hướng khác. Nhưng việc trồng người luôn cảm thụ với chuyến đò ngang, cứ tần tảo đưa rồi lặng lẽ quay về đưa sang. Con đò năm xưa của Thầy nặng trĩu yêu thương, hy sinh thầm lặng.',
 8, '2014/1/2'
 );
+
+create table users(
+    id int unsigned auto_increment primary key,
+    username varchar(60) not null,
+    password varchar(60) not null,
+    role varchar(60) not null
+);
+insert into users (username, password, role) VALUES ('admin1', '1234@', 'admin');
+insert into users (username, password, role) VALUES ('admin2', '1234@', 'admin');
+insert into users (username, password, role) VALUES ('thao1', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao2', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao3', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao4', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao5', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao7', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao8', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao9', '1234@', 'user');
+insert into users (username, password, role) VALUES ('thao10', '1234@', 'user');

@@ -30,7 +30,7 @@ $stmt_baiviet = $pdo->query($sql_baiviet);
 $count_baiviet = $stmt_baiviet->fetch()['count_baiviet'];
 
 // Nếu cần thêm số lượng người dùng, tiếp tục thực hiện tương tự với bảng users (nếu có).
-$sql_users = "SELECT COUNT(id) AS count_users FROM users";
+$sql_users = "SELECT COUNT(id) AS count_users FROM users WHERE role = 'user'";
 $stmt_users = $pdo->query($sql_users);
 $count_users = $stmt_users->fetch()['count_users'];
 ?>
@@ -73,7 +73,6 @@ $count_users = $stmt_users->fetch()['count_users'];
                 </div>
             </div>
         </nav>
-
     </header>
     <main class="container mt-5 mb-5">
         <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->

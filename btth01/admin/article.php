@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="css/style_login.css">
 </head>
 <?php
-    require ('../connect.php');
-?>
-<?php
-    $sql = 'select * from baiviet';
+    include('../connect.php');
+    $role = 'admin'; 
+    if ($role !== 'admin') {
+        header('Location: ../login.php');
+        exit;
+    }
+    $sql = 'SELECT * FROM baiviet';
     $stmt = $pdo->query($sql);
     $baiviets = $stmt->fetchAll();
 ?>

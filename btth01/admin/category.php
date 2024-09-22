@@ -10,15 +10,16 @@
     <link rel="stylesheet" href="css/style_login.css">
 </head>
 <?php
-    require ('../connect.php');
-?>
-<?php
-    $sql = 'select * from theloai';
+    include('../connect.php');
+    $role = 'admin'; 
+    if ($role !== 'admin') {
+        header('Location: ../login.php');
+        exit;
+    }
+    $sql = 'SELECT * FROM theloai';
     $stmt = $pdo->query($sql);
-    $theloais = $stmt->fetchAll();    
-    ?>
-    
-
+    $theloais = $stmt->fetchAll();
+?>
 
 <body>
     <header>

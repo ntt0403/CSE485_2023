@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <?php
+    include('search.php');
     if (isset($_GET['song'])) {
         $song = $_GET['song'];
     } else {
@@ -56,7 +57,7 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Nội dung cần tìm" aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="Nội dung cần tìm" aria-label="Search" name="query">
                     <button class="btn btn-outline-success" type="submit">Tìm</button>
                 </form>
                 </div>

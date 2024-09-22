@@ -11,12 +11,18 @@
 </head>
 <body>
 <?php
-    require ('../connect.php');
-    
+    include('../connect.php');
+
+    $role = 'admin'; 
+
+    if ($role !== 'admin') {
+        header('Location: ../login.php');
+        exit;
+    }
     $sql = 'SELECT * FROM tacgia';
     $stmt = $pdo->query($sql);
     $tacgias = $stmt->fetchAll();
-    ?>
+?>
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary shadow p-3 bg-white rounded">
         <div class="container-fluid">
